@@ -2,7 +2,6 @@
   font-family: "Norse-Bold";
   src: url("./fonts/Norse-Bold.otf") format("opentype");
 }
-
 * {
   box-sizing: border-box;
 }
@@ -77,10 +76,18 @@ footer a {
 }
 .form-field input {
   font-size: 1.2em;
-  border: solid 2px #cbcdce;
+  border: solid 4px #cbcdce;
   border-radius: 5px;
   height: 2.5rem;
   padding-left: 10px;
+}
+.form-field input:required:invalid {
+  border: solid 4px #ef0505;
+  background-color: #ef05055d;
+}
+.form-field input:required:valid {
+  border: solid 4px #27880c;
+  background-color: #27880c4a;
 }
 .required::after {
   content: " *";
@@ -92,6 +99,7 @@ button {
   border: none;
   border-radius: 5px;
   background-color: green;
+  color: #ffffff;
 
   padding: 15px;
   margin-top: 5%;
